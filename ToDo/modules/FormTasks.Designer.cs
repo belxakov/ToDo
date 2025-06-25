@@ -37,17 +37,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.boxTasksName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonCloseApplication = new System.Windows.Forms.PictureBox();
             this.panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupAddTasks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonCloseApplication)).BeginInit();
             this.SuspendLayout();
             // 
             // panelData
             // 
             this.panelData.Controls.Add(this.dataGridView1);
-            this.panelData.Location = new System.Drawing.Point(12, 4);
+            this.panelData.Location = new System.Drawing.Point(12, 42);
             this.panelData.Name = "panelData";
-            this.panelData.Size = new System.Drawing.Size(770, 400);
+            this.panelData.Size = new System.Drawing.Size(770, 362);
             this.panelData.TabIndex = 0;
             // 
             // dataGridView1
@@ -55,10 +57,10 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 8);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(763, 389);
+            this.dataGridView1.Size = new System.Drawing.Size(763, 394);
             this.dataGridView1.TabIndex = 0;
             // 
             // panelAddTask
@@ -130,12 +132,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Заголовок задачи:";
             // 
+            // buttonCloseApplication
+            // 
+            this.buttonCloseApplication.Image = global::ToDo.Properties.Resources.closeApp;
+            this.buttonCloseApplication.Location = new System.Drawing.Point(755, 12);
+            this.buttonCloseApplication.Name = "buttonCloseApplication";
+            this.buttonCloseApplication.Size = new System.Drawing.Size(24, 24);
+            this.buttonCloseApplication.TabIndex = 3;
+            this.buttonCloseApplication.TabStop = false;
+            this.buttonCloseApplication.Click += new System.EventHandler(this.buttonCloseApplication_Click);
+            // 
             // FormTasks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(794, 640);
+            this.Controls.Add(this.buttonCloseApplication);
             this.Controls.Add(this.groupAddTasks);
             this.Controls.Add(this.panelAddTask);
             this.Controls.Add(this.panelData);
@@ -148,6 +161,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupAddTasks.ResumeLayout(false);
             this.groupAddTasks.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonCloseApplication)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -163,5 +177,6 @@
         private System.Windows.Forms.TextBox boxTasksName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonSaveData;
+        private System.Windows.Forms.PictureBox buttonCloseApplication;
     }
 }

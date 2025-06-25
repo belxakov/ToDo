@@ -84,5 +84,17 @@ namespace ToDo.modules
         {
             InsertTask();
         }
+
+        private void buttonCloseApplication_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Вы уверены, что хотите завершить процесс?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                return;
+            }
+        }
     }
 }

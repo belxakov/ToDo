@@ -32,6 +32,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelAddClient = new System.Windows.Forms.Panel();
             this.groupAddClient = new System.Windows.Forms.GroupBox();
+            this.boxClientPhoneNumber = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.boxClientPatronymic = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,19 +41,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.boxClientSurname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.boxClientPhoneNumber = new System.Windows.Forms.MaskedTextBox();
+            this.buttonCloseApplication = new System.Windows.Forms.PictureBox();
             this.panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelAddClient.SuspendLayout();
             this.groupAddClient.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonCloseApplication)).BeginInit();
             this.SuspendLayout();
             // 
             // panelData
             // 
             this.panelData.Controls.Add(this.dataGridView1);
-            this.panelData.Location = new System.Drawing.Point(12, 12);
+            this.panelData.Location = new System.Drawing.Point(12, 42);
             this.panelData.Name = "panelData";
-            this.panelData.Size = new System.Drawing.Size(770, 318);
+            this.panelData.Size = new System.Drawing.Size(770, 288);
             this.panelData.TabIndex = 1;
             // 
             // dataGridView1
@@ -94,6 +96,14 @@
             this.groupAddClient.TabIndex = 0;
             this.groupAddClient.TabStop = false;
             this.groupAddClient.Text = "Клиент";
+            // 
+            // boxClientPhoneNumber
+            // 
+            this.boxClientPhoneNumber.Location = new System.Drawing.Point(153, 165);
+            this.boxClientPhoneNumber.Mask = "+7 (999) 000-00-00";
+            this.boxClientPhoneNumber.Name = "boxClientPhoneNumber";
+            this.boxClientPhoneNumber.Size = new System.Drawing.Size(594, 29);
+            this.boxClientPhoneNumber.TabIndex = 8;
             // 
             // label3
             // 
@@ -165,13 +175,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Фамилия клиента:";
             // 
-            // boxClientPhoneNumber
+            // buttonCloseApplication
             // 
-            this.boxClientPhoneNumber.Location = new System.Drawing.Point(153, 165);
-            this.boxClientPhoneNumber.Mask = "+7 (999) 000-00-00";
-            this.boxClientPhoneNumber.Name = "boxClientPhoneNumber";
-            this.boxClientPhoneNumber.Size = new System.Drawing.Size(594, 29);
-            this.boxClientPhoneNumber.TabIndex = 8;
+            this.buttonCloseApplication.Image = global::ToDo.Properties.Resources.closeApp;
+            this.buttonCloseApplication.Location = new System.Drawing.Point(755, 12);
+            this.buttonCloseApplication.Name = "buttonCloseApplication";
+            this.buttonCloseApplication.Size = new System.Drawing.Size(24, 24);
+            this.buttonCloseApplication.TabIndex = 3;
+            this.buttonCloseApplication.TabStop = false;
+            this.buttonCloseApplication.Click += new System.EventHandler(this.buttonCloseApplication_Click);
             // 
             // FormClients
             // 
@@ -179,6 +191,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(794, 640);
+            this.Controls.Add(this.buttonCloseApplication);
             this.Controls.Add(this.panelAddClient);
             this.Controls.Add(this.panelData);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -191,6 +204,7 @@
             this.panelAddClient.ResumeLayout(false);
             this.groupAddClient.ResumeLayout(false);
             this.groupAddClient.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonCloseApplication)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,5 +224,6 @@
         private System.Windows.Forms.TextBox boxClientPatronymic;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox boxClientPhoneNumber;
+        private System.Windows.Forms.PictureBox buttonCloseApplication;
     }
 }

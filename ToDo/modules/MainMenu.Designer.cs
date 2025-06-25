@@ -36,11 +36,21 @@
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.buttonCloseApplication = new System.Windows.Forms.PictureBox();
             this.panelClients = new System.Windows.Forms.Panel();
+            this.titleClients = new System.Windows.Forms.Label();
+            this.gridClients = new System.Windows.Forms.DataGridView();
             this.panelImportantDate = new System.Windows.Forms.Panel();
+            this.titleTasks = new System.Windows.Forms.Label();
+            this.completeTasks = new System.Windows.Forms.Label();
+            this.allCountTasks = new System.Windows.Forms.Label();
+            this.gridTasks = new System.Windows.Forms.DataGridView();
             this.panelMenu.SuspendLayout();
             this.panelButtonZone.SuspendLayout();
             this.panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonCloseApplication)).BeginInit();
+            this.panelClients.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClients)).BeginInit();
+            this.panelImportantDate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTasks)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -139,17 +149,89 @@
             // 
             // panelClients
             // 
+            this.panelClients.Controls.Add(this.titleClients);
+            this.panelClients.Controls.Add(this.gridClients);
             this.panelClients.Location = new System.Drawing.Point(412, 41);
             this.panelClients.Name = "panelClients";
             this.panelClients.Size = new System.Drawing.Size(370, 250);
             this.panelClients.TabIndex = 1;
             // 
+            // titleClients
+            // 
+            this.titleClients.AutoSize = true;
+            this.titleClients.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleClients.ForeColor = System.Drawing.Color.White;
+            this.titleClients.Location = new System.Drawing.Point(154, 8);
+            this.titleClients.Name = "titleClients";
+            this.titleClients.Size = new System.Drawing.Size(77, 21);
+            this.titleClients.TabIndex = 4;
+            this.titleClients.Text = "Клиенты";
+            // 
+            // gridClients
+            // 
+            this.gridClients.AllowUserToAddRows = false;
+            this.gridClients.AllowUserToDeleteRows = false;
+            this.gridClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridClients.Location = new System.Drawing.Point(0, 32);
+            this.gridClients.Name = "gridClients";
+            this.gridClients.ReadOnly = true;
+            this.gridClients.Size = new System.Drawing.Size(370, 218);
+            this.gridClients.TabIndex = 1;
+            // 
             // panelImportantDate
             // 
+            this.panelImportantDate.Controls.Add(this.titleTasks);
+            this.panelImportantDate.Controls.Add(this.completeTasks);
+            this.panelImportantDate.Controls.Add(this.allCountTasks);
+            this.panelImportantDate.Controls.Add(this.gridTasks);
             this.panelImportantDate.Location = new System.Drawing.Point(17, 41);
             this.panelImportantDate.Name = "panelImportantDate";
             this.panelImportantDate.Size = new System.Drawing.Size(370, 250);
             this.panelImportantDate.TabIndex = 0;
+            // 
+            // titleTasks
+            // 
+            this.titleTasks.AutoSize = true;
+            this.titleTasks.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleTasks.ForeColor = System.Drawing.Color.White;
+            this.titleTasks.Location = new System.Drawing.Point(154, 8);
+            this.titleTasks.Name = "titleTasks";
+            this.titleTasks.Size = new System.Drawing.Size(63, 21);
+            this.titleTasks.TabIndex = 3;
+            this.titleTasks.Text = "Задачи";
+            // 
+            // completeTasks
+            // 
+            this.completeTasks.AutoSize = true;
+            this.completeTasks.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.completeTasks.ForeColor = System.Drawing.Color.White;
+            this.completeTasks.Location = new System.Drawing.Point(242, 222);
+            this.completeTasks.Name = "completeTasks";
+            this.completeTasks.Size = new System.Drawing.Size(106, 21);
+            this.completeTasks.TabIndex = 2;
+            this.completeTasks.Text = "Выполнено:";
+            // 
+            // allCountTasks
+            // 
+            this.allCountTasks.AutoSize = true;
+            this.allCountTasks.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.allCountTasks.ForeColor = System.Drawing.Color.White;
+            this.allCountTasks.Location = new System.Drawing.Point(4, 222);
+            this.allCountTasks.Name = "allCountTasks";
+            this.allCountTasks.Size = new System.Drawing.Size(58, 21);
+            this.allCountTasks.TabIndex = 1;
+            this.allCountTasks.Text = "Всего:";
+            // 
+            // gridTasks
+            // 
+            this.gridTasks.AllowUserToAddRows = false;
+            this.gridTasks.AllowUserToDeleteRows = false;
+            this.gridTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridTasks.Location = new System.Drawing.Point(0, 32);
+            this.gridTasks.Name = "gridTasks";
+            this.gridTasks.ReadOnly = true;
+            this.gridTasks.Size = new System.Drawing.Size(370, 183);
+            this.gridTasks.TabIndex = 0;
             // 
             // MainMenu
             // 
@@ -167,6 +249,12 @@
             this.panelButtonZone.ResumeLayout(false);
             this.panelDesktop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.buttonCloseApplication)).EndInit();
+            this.panelClients.ResumeLayout(false);
+            this.panelClients.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClients)).EndInit();
+            this.panelImportantDate.ResumeLayout(false);
+            this.panelImportantDate.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTasks)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -182,5 +270,11 @@
         private System.Windows.Forms.Panel panelImportantDate;
         private System.Windows.Forms.Panel panelClients;
         private System.Windows.Forms.PictureBox buttonCloseApplication;
+        private System.Windows.Forms.DataGridView gridClients;
+        private System.Windows.Forms.DataGridView gridTasks;
+        private System.Windows.Forms.Label allCountTasks;
+        private System.Windows.Forms.Label completeTasks;
+        private System.Windows.Forms.Label titleTasks;
+        private System.Windows.Forms.Label titleClients;
     }
 }

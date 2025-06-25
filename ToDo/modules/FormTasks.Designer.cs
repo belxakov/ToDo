@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panelData = new System.Windows.Forms.Panel();
-            this.panelAddTask = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panelAddTask = new System.Windows.Forms.Panel();
             this.groupAddTasks = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.boxTasksName = new System.Windows.Forms.TextBox();
+            this.buttonSaveData = new System.Windows.Forms.Button();
             this.boxTasksDescription = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.boxTasksName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelData.SuspendLayout();
-            this.panelAddTask.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panelAddTask.SuspendLayout();
             this.groupAddTasks.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,14 +50,6 @@
             this.panelData.Name = "panelData";
             this.panelData.Size = new System.Drawing.Size(770, 400);
             this.panelData.TabIndex = 0;
-            // 
-            // panelAddTask
-            // 
-            this.panelAddTask.Controls.Add(this.groupAddTasks);
-            this.panelAddTask.Location = new System.Drawing.Point(12, 418);
-            this.panelAddTask.Name = "panelAddTask";
-            this.panelAddTask.Size = new System.Drawing.Size(770, 210);
-            this.panelAddTask.TabIndex = 1;
             // 
             // dataGridView1
             // 
@@ -70,9 +62,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(763, 393);
             this.dataGridView1.TabIndex = 0;
             // 
+            // panelAddTask
+            // 
+            this.panelAddTask.Controls.Add(this.groupAddTasks);
+            this.panelAddTask.Location = new System.Drawing.Point(12, 418);
+            this.panelAddTask.Name = "panelAddTask";
+            this.panelAddTask.Size = new System.Drawing.Size(770, 210);
+            this.panelAddTask.TabIndex = 1;
+            // 
             // groupAddTasks
             // 
-            this.groupAddTasks.Controls.Add(this.button1);
+            this.groupAddTasks.Controls.Add(this.buttonSaveData);
             this.groupAddTasks.Controls.Add(this.boxTasksDescription);
             this.groupAddTasks.Controls.Add(this.label2);
             this.groupAddTasks.Controls.Add(this.boxTasksName);
@@ -87,21 +87,18 @@
             this.groupAddTasks.TabStop = false;
             this.groupAddTasks.Text = "Добавить новую задачу";
             // 
-            // label1
+            // buttonSaveData
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Заголовок задачи:";
-            // 
-            // boxTasksName
-            // 
-            this.boxTasksName.Location = new System.Drawing.Point(153, 54);
-            this.boxTasksName.Name = "boxTasksName";
-            this.boxTasksName.Size = new System.Drawing.Size(594, 29);
-            this.boxTasksName.TabIndex = 1;
+            this.buttonSaveData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.buttonSaveData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSaveData.Location = new System.Drawing.Point(590, 141);
+            this.buttonSaveData.Name = "buttonSaveData";
+            this.buttonSaveData.Size = new System.Drawing.Size(157, 45);
+            this.buttonSaveData.TabIndex = 4;
+            this.buttonSaveData.Text = "Сохранить";
+            this.buttonSaveData.UseVisualStyleBackColor = true;
+            this.buttonSaveData.Click += new System.EventHandler(this.buttonSaveData_Click);
             // 
             // boxTasksDescription
             // 
@@ -119,17 +116,21 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Описание задачи:";
             // 
-            // button1
+            // boxTasksName
             // 
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(590, 141);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 45);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Сохранить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.boxTasksName.Location = new System.Drawing.Point(153, 54);
+            this.boxTasksName.Name = "boxTasksName";
+            this.boxTasksName.Size = new System.Drawing.Size(594, 29);
+            this.boxTasksName.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Заголовок задачи:";
             // 
             // FormTasks
             // 
@@ -145,8 +146,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTasks";
             this.panelData.ResumeLayout(false);
-            this.panelAddTask.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panelAddTask.ResumeLayout(false);
             this.groupAddTasks.ResumeLayout(false);
             this.groupAddTasks.PerformLayout();
             this.ResumeLayout(false);
@@ -163,6 +164,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox boxTasksName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonSaveData;
     }
 }

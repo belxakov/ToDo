@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="modules\FormTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\FormTasks.Designer.cs">
+      <DependentUpon>FormTasks.cs</DependentUpon>
+    </Compile>
     <Compile Include="modules\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="modules\FormTasks.resx">
+      <DependentUpon>FormTasks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="modules\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>

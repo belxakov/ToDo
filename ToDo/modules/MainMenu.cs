@@ -23,5 +23,11 @@ namespace ToDo.modules
             this.Text = "ToDo | Главное меню";
             this.StartPosition = FormStartPosition.CenterScreen;
         }
+
+        private void buttonGoTasks_Click(object sender, EventArgs e)
+        {
+            modules.FormTasks formTasks = new modules.FormTasks();
+            formTasks.ShowDialog();
+        }
     }
 }

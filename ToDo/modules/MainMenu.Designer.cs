@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelButtonZone = new System.Windows.Forms.Panel();
-            this.panelImportantDate = new System.Windows.Forms.Panel();
+            this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelClients = new System.Windows.Forms.Panel();
+            this.panelImportantDate = new System.Windows.Forms.Panel();
             this.buttonCloseApplication = new System.Windows.Forms.PictureBox();
             this.buttonGoImportantDate = new System.Windows.Forms.Button();
             this.buttonGoClients = new System.Windows.Forms.Button();
             this.buttonGoTasks = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
-            this.panelDesktop.SuspendLayout();
             this.panelButtonZone.SuspendLayout();
+            this.panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonCloseApplication)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +53,16 @@
             this.panelMenu.Size = new System.Drawing.Size(230, 640);
             this.panelMenu.TabIndex = 0;
             // 
+            // panelButtonZone
+            // 
+            this.panelButtonZone.Controls.Add(this.buttonGoImportantDate);
+            this.panelButtonZone.Controls.Add(this.buttonGoClients);
+            this.panelButtonZone.Controls.Add(this.buttonGoTasks);
+            this.panelButtonZone.Location = new System.Drawing.Point(0, 206);
+            this.panelButtonZone.Name = "panelButtonZone";
+            this.panelButtonZone.Size = new System.Drawing.Size(230, 200);
+            this.panelButtonZone.TabIndex = 0;
+            // 
             // panelDesktop
             // 
             this.panelDesktop.Controls.Add(this.buttonCloseApplication);
@@ -64,15 +74,12 @@
             this.panelDesktop.Size = new System.Drawing.Size(794, 640);
             this.panelDesktop.TabIndex = 1;
             // 
-            // panelButtonZone
+            // panelClients
             // 
-            this.panelButtonZone.Controls.Add(this.buttonGoImportantDate);
-            this.panelButtonZone.Controls.Add(this.buttonGoClients);
-            this.panelButtonZone.Controls.Add(this.buttonGoTasks);
-            this.panelButtonZone.Location = new System.Drawing.Point(0, 206);
-            this.panelButtonZone.Name = "panelButtonZone";
-            this.panelButtonZone.Size = new System.Drawing.Size(230, 200);
-            this.panelButtonZone.TabIndex = 0;
+            this.panelClients.Location = new System.Drawing.Point(412, 41);
+            this.panelClients.Name = "panelClients";
+            this.panelClients.Size = new System.Drawing.Size(370, 250);
+            this.panelClients.TabIndex = 1;
             // 
             // panelImportantDate
             // 
@@ -80,13 +87,6 @@
             this.panelImportantDate.Name = "panelImportantDate";
             this.panelImportantDate.Size = new System.Drawing.Size(370, 250);
             this.panelImportantDate.TabIndex = 0;
-            // 
-            // panelClients
-            // 
-            this.panelClients.Location = new System.Drawing.Point(412, 41);
-            this.panelClients.Name = "panelClients";
-            this.panelClients.Size = new System.Drawing.Size(370, 250);
-            this.panelClients.TabIndex = 1;
             // 
             // buttonCloseApplication
             // 
@@ -147,6 +147,7 @@
             this.buttonGoTasks.TabIndex = 0;
             this.buttonGoTasks.Text = "Задачи";
             this.buttonGoTasks.UseVisualStyleBackColor = true;
+            this.buttonGoTasks.Click += new System.EventHandler(this.buttonGoTasks_Click);
             // 
             // MainMenu
             // 
@@ -161,8 +162,8 @@
             this.Name = "MainMenu";
             this.Text = "MainMenu";
             this.panelMenu.ResumeLayout(false);
-            this.panelDesktop.ResumeLayout(false);
             this.panelButtonZone.ResumeLayout(false);
+            this.panelDesktop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.buttonCloseApplication)).EndInit();
             this.ResumeLayout(false);
 

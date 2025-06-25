@@ -39,7 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panelAddTask.SuspendLayout();
             this.groupAddTasks.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,15 +55,14 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 8);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(763, 393);
+            this.dataGridView1.Size = new System.Drawing.Size(763, 389);
             this.dataGridView1.TabIndex = 0;
             // 
             // panelAddTask
             // 
-            this.panelAddTask.Controls.Add(this.groupAddTasks);
             this.panelAddTask.Location = new System.Drawing.Point(12, 418);
             this.panelAddTask.Name = "panelAddTask";
             this.panelAddTask.Size = new System.Drawing.Size(770, 210);
@@ -80,12 +78,12 @@
             this.groupAddTasks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupAddTasks.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupAddTasks.ForeColor = System.Drawing.Color.White;
-            this.groupAddTasks.Location = new System.Drawing.Point(4, 4);
+            this.groupAddTasks.Location = new System.Drawing.Point(16, 410);
             this.groupAddTasks.Name = "groupAddTasks";
-            this.groupAddTasks.Size = new System.Drawing.Size(763, 203);
+            this.groupAddTasks.Size = new System.Drawing.Size(766, 204);
             this.groupAddTasks.TabIndex = 0;
             this.groupAddTasks.TabStop = false;
-            this.groupAddTasks.Text = "Добавить новую задачу";
+            this.groupAddTasks.Text = "Задача";
             // 
             // buttonSaveData
             // 
@@ -138,6 +136,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(794, 640);
+            this.Controls.Add(this.groupAddTasks);
             this.Controls.Add(this.panelAddTask);
             this.Controls.Add(this.panelData);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -147,7 +146,6 @@
             this.Text = "FormTasks";
             this.panelData.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panelAddTask.ResumeLayout(false);
             this.groupAddTasks.ResumeLayout(false);
             this.groupAddTasks.PerformLayout();
             this.ResumeLayout(false);

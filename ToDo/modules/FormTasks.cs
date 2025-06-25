@@ -33,6 +33,7 @@ namespace ToDo.modules
                     DataTable table = new DataTable();
                     adLoad.Fill(table);
                     dataGridView1.DataSource = table;
+                    dataGridView1.Columns["ID"].Visible = false;
                 }
             }
             catch (Exception ex)

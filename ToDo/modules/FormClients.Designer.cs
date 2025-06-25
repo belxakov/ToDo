@@ -32,7 +32,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelAddClient = new System.Windows.Forms.Panel();
             this.groupAddClient = new System.Windows.Forms.GroupBox();
-            this.boxClientPhoneNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.boxClientPatronymic = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.boxClientSurname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.boxClientPhoneNumber = new System.Windows.Forms.MaskedTextBox();
             this.panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelAddClient.SuspendLayout();
@@ -94,13 +94,6 @@
             this.groupAddClient.TabIndex = 0;
             this.groupAddClient.TabStop = false;
             this.groupAddClient.Text = "Клиент";
-            // 
-            // boxClientPhoneNumber
-            // 
-            this.boxClientPhoneNumber.Location = new System.Drawing.Point(153, 165);
-            this.boxClientPhoneNumber.Name = "boxClientPhoneNumber";
-            this.boxClientPhoneNumber.Size = new System.Drawing.Size(594, 29);
-            this.boxClientPhoneNumber.TabIndex = 8;
             // 
             // label3
             // 
@@ -172,6 +165,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Фамилия клиента:";
             // 
+            // boxClientPhoneNumber
+            // 
+            this.boxClientPhoneNumber.Location = new System.Drawing.Point(153, 165);
+            this.boxClientPhoneNumber.Mask = "+7 (999) 000-00-00";
+            this.boxClientPhoneNumber.Name = "boxClientPhoneNumber";
+            this.boxClientPhoneNumber.Size = new System.Drawing.Size(594, 29);
+            this.boxClientPhoneNumber.TabIndex = 8;
+            // 
             // FormClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,9 +206,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox boxClientSurname;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox boxClientPhoneNumber;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox boxClientPatronymic;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.MaskedTextBox boxClientPhoneNumber;
     }
 }

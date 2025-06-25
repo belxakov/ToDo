@@ -135,6 +135,7 @@
             this.buttonCloseApplication.Size = new System.Drawing.Size(24, 24);
             this.buttonCloseApplication.TabIndex = 2;
             this.buttonCloseApplication.TabStop = false;
+            this.buttonCloseApplication.Click += new System.EventHandler(this.buttonCloseApplication_Click);
             // 
             // panelClients
             // 

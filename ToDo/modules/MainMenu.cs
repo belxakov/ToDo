@@ -12,6 +12,7 @@ namespace ToDo.modules
 {
     public partial class MainMenu : Form
     {
+        private Form activeForm;
         public MainMenu()
         {
             InitializeComponent();
@@ -24,16 +25,42 @@ namespace ToDo.modules
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
+        private void OpenDesktopForm(Form desktopForm, object buttonSender)
+        {
+            if(activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = desktopForm;
+            desktopForm.TopLevel = false;
+            desktopForm.FormBorderStyle = FormBorderStyle.None;
+            desktopForm.Dock = DockStyle.Fill;
+            this.panelDesktop.Controls.Add(desktopForm);
+            this.panelDesktop.Tag = desktopForm;
+            desktopForm.BringToFront();
+            desktopForm.Show();
+        }
+
         private void buttonGoTasks_Click(object sender, EventArgs e)
         {
-            modules.FormTasks formTasks = new modules.FormTasks();
-            formTasks.ShowDialog();
+            OpenDesktopForm(new modules.FormTasks(), sender);
         }
 
         private void buttonGoClients_Click(object sender, EventArgs e)
         {
-            modules.FormClients formClients = new modules.FormClients();
-            formClients.ShowDialog();
+            OpenDesktopForm(new modules.FormClients(), sender);
+        }
+
+        private void buttonCloseApplication_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Вы уверены, что хотите завершить процесс?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

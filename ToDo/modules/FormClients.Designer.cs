@@ -32,15 +32,15 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelAddClient = new System.Windows.Forms.Panel();
             this.groupAddClient = new System.Windows.Forms.GroupBox();
+            this.boxClientPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.boxClientPatronymic = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.buttonSaveData = new System.Windows.Forms.Button();
             this.boxClientName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.boxClientSurname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.boxClientPhoneNumber = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.boxClientPatronymic = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelAddClient.SuspendLayout();
@@ -95,6 +95,38 @@
             this.groupAddClient.TabStop = false;
             this.groupAddClient.Text = "Клиент";
             // 
+            // boxClientPhoneNumber
+            // 
+            this.boxClientPhoneNumber.Location = new System.Drawing.Point(153, 165);
+            this.boxClientPhoneNumber.Name = "boxClientPhoneNumber";
+            this.boxClientPhoneNumber.Size = new System.Drawing.Size(594, 29);
+            this.boxClientPhoneNumber.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 168);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 21);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Номер телефона:";
+            // 
+            // boxClientPatronymic
+            // 
+            this.boxClientPatronymic.Location = new System.Drawing.Point(153, 119);
+            this.boxClientPatronymic.Name = "boxClientPatronymic";
+            this.boxClientPatronymic.Size = new System.Drawing.Size(594, 29);
+            this.boxClientPatronymic.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 122);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(141, 21);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Отчество клиента:";
+            // 
             // buttonSaveData
             // 
             this.buttonSaveData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -106,6 +138,7 @@
             this.buttonSaveData.TabIndex = 4;
             this.buttonSaveData.Text = "Сохранить";
             this.buttonSaveData.UseVisualStyleBackColor = true;
+            this.buttonSaveData.Click += new System.EventHandler(this.buttonSaveData_Click);
             // 
             // boxClientName
             // 
@@ -138,38 +171,6 @@
             this.label1.Size = new System.Drawing.Size(139, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Фамилия клиента:";
-            // 
-            // boxClientPhoneNumber
-            // 
-            this.boxClientPhoneNumber.Location = new System.Drawing.Point(153, 165);
-            this.boxClientPhoneNumber.Name = "boxClientPhoneNumber";
-            this.boxClientPhoneNumber.Size = new System.Drawing.Size(594, 29);
-            this.boxClientPhoneNumber.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 168);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 21);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Номер телефона:";
-            // 
-            // boxClientPatronymic
-            // 
-            this.boxClientPatronymic.Location = new System.Drawing.Point(153, 119);
-            this.boxClientPatronymic.Name = "boxClientPatronymic";
-            this.boxClientPatronymic.Size = new System.Drawing.Size(594, 29);
-            this.boxClientPatronymic.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 122);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 21);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Отчество клиента:";
             // 
             // FormClients
             // 

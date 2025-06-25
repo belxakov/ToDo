@@ -30,13 +30,13 @@
         {
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelButtonZone = new System.Windows.Forms.Panel();
-            this.panelDesktop = new System.Windows.Forms.Panel();
-            this.panelClients = new System.Windows.Forms.Panel();
-            this.panelImportantDate = new System.Windows.Forms.Panel();
-            this.buttonCloseApplication = new System.Windows.Forms.PictureBox();
             this.buttonGoImportantDate = new System.Windows.Forms.Button();
             this.buttonGoClients = new System.Windows.Forms.Button();
             this.buttonGoTasks = new System.Windows.Forms.Button();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.buttonCloseApplication = new System.Windows.Forms.PictureBox();
+            this.panelClients = new System.Windows.Forms.Panel();
+            this.panelImportantDate = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelButtonZone.SuspendLayout();
             this.panelDesktop.SuspendLayout();
@@ -62,40 +62,6 @@
             this.panelButtonZone.Name = "panelButtonZone";
             this.panelButtonZone.Size = new System.Drawing.Size(230, 200);
             this.panelButtonZone.TabIndex = 0;
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.Controls.Add(this.buttonCloseApplication);
-            this.panelDesktop.Controls.Add(this.panelClients);
-            this.panelDesktop.Controls.Add(this.panelImportantDate);
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(230, 0);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(794, 640);
-            this.panelDesktop.TabIndex = 1;
-            // 
-            // panelClients
-            // 
-            this.panelClients.Location = new System.Drawing.Point(412, 41);
-            this.panelClients.Name = "panelClients";
-            this.panelClients.Size = new System.Drawing.Size(370, 250);
-            this.panelClients.TabIndex = 1;
-            // 
-            // panelImportantDate
-            // 
-            this.panelImportantDate.Location = new System.Drawing.Point(17, 41);
-            this.panelImportantDate.Name = "panelImportantDate";
-            this.panelImportantDate.Size = new System.Drawing.Size(370, 250);
-            this.panelImportantDate.TabIndex = 0;
-            // 
-            // buttonCloseApplication
-            // 
-            this.buttonCloseApplication.Image = global::ToDo.Properties.Resources.closeApp;
-            this.buttonCloseApplication.Location = new System.Drawing.Point(758, 11);
-            this.buttonCloseApplication.Name = "buttonCloseApplication";
-            this.buttonCloseApplication.Size = new System.Drawing.Size(24, 24);
-            this.buttonCloseApplication.TabIndex = 2;
-            this.buttonCloseApplication.TabStop = false;
             // 
             // buttonGoImportantDate
             // 
@@ -130,6 +96,7 @@
             this.buttonGoClients.TabIndex = 1;
             this.buttonGoClients.Text = "Клиенты";
             this.buttonGoClients.UseVisualStyleBackColor = true;
+            this.buttonGoClients.Click += new System.EventHandler(this.buttonGoClients_Click);
             // 
             // buttonGoTasks
             // 
@@ -148,6 +115,40 @@
             this.buttonGoTasks.Text = "Задачи";
             this.buttonGoTasks.UseVisualStyleBackColor = true;
             this.buttonGoTasks.Click += new System.EventHandler(this.buttonGoTasks_Click);
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.Controls.Add(this.buttonCloseApplication);
+            this.panelDesktop.Controls.Add(this.panelClients);
+            this.panelDesktop.Controls.Add(this.panelImportantDate);
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(230, 0);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(794, 640);
+            this.panelDesktop.TabIndex = 1;
+            // 
+            // buttonCloseApplication
+            // 
+            this.buttonCloseApplication.Image = global::ToDo.Properties.Resources.closeApp;
+            this.buttonCloseApplication.Location = new System.Drawing.Point(758, 11);
+            this.buttonCloseApplication.Name = "buttonCloseApplication";
+            this.buttonCloseApplication.Size = new System.Drawing.Size(24, 24);
+            this.buttonCloseApplication.TabIndex = 2;
+            this.buttonCloseApplication.TabStop = false;
+            // 
+            // panelClients
+            // 
+            this.panelClients.Location = new System.Drawing.Point(412, 41);
+            this.panelClients.Name = "panelClients";
+            this.panelClients.Size = new System.Drawing.Size(370, 250);
+            this.panelClients.TabIndex = 1;
+            // 
+            // panelImportantDate
+            // 
+            this.panelImportantDate.Location = new System.Drawing.Point(17, 41);
+            this.panelImportantDate.Name = "panelImportantDate";
+            this.panelImportantDate.Size = new System.Drawing.Size(370, 250);
+            this.panelImportantDate.TabIndex = 0;
             // 
             // MainMenu
             // 

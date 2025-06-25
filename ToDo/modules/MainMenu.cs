@@ -29,5 +29,11 @@ namespace ToDo.modules
             modules.FormTasks formTasks = new modules.FormTasks();
             formTasks.ShowDialog();
         }
+
+        private void buttonGoClients_Click(object sender, EventArgs e)
+        {
+            modules.FormClients formClients = new modules.FormClients();
+            formClients.ShowDialog();
+        }
     }
 }

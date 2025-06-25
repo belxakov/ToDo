@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `todo` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `todo`;
 -- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
 --
 -- Host: localhost    Database: todo
@@ -16,6 +14,33 @@ USE `todo`;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `clients`
+--
+
+DROP TABLE IF EXISTS `clients`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `clients` (
+  `ClientsID` int NOT NULL AUTO_INCREMENT,
+  `ClientsSurname` varchar(100) NOT NULL,
+  `ClientsName` varchar(100) NOT NULL,
+  `ClientsPatronymic` varchar(100) DEFAULT NULL,
+  `ClientsPhoneNumber` varchar(70) NOT NULL,
+  PRIMARY KEY (`ClientsID`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `clients`
+--
+
+LOCK TABLES `clients` WRITE;
+/*!40000 ALTER TABLE `clients` DISABLE KEYS */;
+INSERT INTO `clients` VALUES (1,'FDsdfs','sdfas','asdfsad','asdfasfds'),(2,'Боеголовкин','Голова','','12312312'),(3,'ыва','фывафыв','','фывафы'),(4,'ываыв','фыва','фывафыва','фыва');
+/*!40000 ALTER TABLE `clients` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `complete_status`
@@ -54,7 +79,7 @@ CREATE TABLE `tasks` (
   `TasksDescription` varchar(45) DEFAULT NULL,
   `IsCompleted` int NOT NULL,
   PRIMARY KEY (`TasksID`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,7 +88,7 @@ CREATE TABLE `tasks` (
 
 LOCK TABLES `tasks` WRITE;
 /*!40000 ALTER TABLE `tasks` DISABLE KEYS */;
-INSERT INTO `tasks` VALUES (1,'Макет','Разработка макета',1),(2,'Проект','Создать проект',1),(3,'Дизайн','Перенести дизайн',1),(4,'Создать дашборд',NULL,2),(5,'Создать планировку задач',NULL,2),(6,'выаывфаыа','фыафывафы',2),(7,'аываы','фыафыва',2),(8,'аыфаы','аывафыа',2),(9,'вапывапв','ывапывапвы',2);
+INSERT INTO `tasks` VALUES (1,'Макет','Разработка макета',1),(2,'Проект','Создать проект',1),(3,'Дизайн','Перенести дизайн',1),(4,'Создать дашборд',NULL,2),(5,'Создать планировку задач',NULL,2),(6,'выаывфаыа','фыафывафы',2),(7,'аываы','фыафыва',2),(8,'аыфаы','аывафыа',2),(9,'вапывапв','ывапывапвы',2),(10,'фыва','',2);
 /*!40000 ALTER TABLE `tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -76,4 +101,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-06-25 17:17:30
+-- Dump completed on 2025-06-25 17:35:20
